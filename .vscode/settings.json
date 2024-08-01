@@ -1,0 +1,25 @@
+{
+  "cSpell.words": [
+    "addopts",
+    "azuretools",
+    "builtins",
+    "charliermarsh",
+    "codespaces",
+    "devcontainer",
+    "devcontainers",
+    "errorlens",
+    "esbenp",
+    "ignorelist",
+    "matangover",
+    "mypy",
+    "oderwat",
+    "pydocstyle",
+    "pylance",
+    "pylint",
+    "pytest",
+    "sqlalchemy",
+    "tamasfe",
+    "usernamehw",
+    "xdist"
+  ]
+}
