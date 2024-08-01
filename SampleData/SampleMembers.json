@@ -1,0 +1,28 @@
+{
+    "activeMembers": 100,
+    "inactiveMembers": 40,
+    "members": [
+        {
+            "firstName": "John",
+            "middleName": "Henry",
+            "lastName": "Doe",
+            "status": true,
+            "address": {
+                "addressLocality": "Hoboken",
+                "addressRegion": "NJ",
+                "postalCode": "07030",
+                "streetAddress": "1 Castle Point Terrace"
+            },
+            "homePhone": "",
+            "cellPhone": "9999999999",
+            "workPhone": "9876543211",
+            "section": "tenor",
+            "birthDate": "1980-01-01",
+            "anniversaryDate": "2006-06-06",
+            "partnerName": "Jack Doe",
+            "emergencyName": "Mom",
+            "emergencyPhone": "8888888888",
+            "yearJoined": "2007"
+        }
+    ]
+}
