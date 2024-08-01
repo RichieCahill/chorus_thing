@@ -1,2 +1,2 @@
-# chours-thing
-chours-thing Name needed
+# Choral-Assist
+Welcome to Chorus Assist! An attempt to push back against the paywalls of organizing your choral activities.
