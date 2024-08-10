@@ -1,4 +1,9 @@
 {
+  // formatters
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" },
   "cSpell.words": [
     "addopts",
     "azuretools",
@@ -13,6 +18,7 @@
     "matangover",
     "mypy",
     "oderwat",
+    "onupdate",
     "pydocstyle",
     "pylance",
     "pylint",
