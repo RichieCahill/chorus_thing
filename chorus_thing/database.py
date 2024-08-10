@@ -28,7 +28,7 @@ class Event(BaseTable):
 
     paid_event: Mapped[bool] = mapped_column(default=False)
     location: Mapped[str]
-    event_time: Mapped[datetime] = mapped_column(default=datetime.now(tz=UTC), onupdate=datetime.now(tz=UTC))
+    event_time: Mapped[datetime | None]
     necessary_size: Mapped[int]
     choral_arrangement: Mapped[str] = mapped_column(default="SATB")
 
