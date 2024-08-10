@@ -63,3 +63,23 @@ class MusicLibrary(BaseTable):
     track09_link: Mapped[str | None]
     number_copies: Mapped[str]
     license_info: Mapped[str | None]
+class Member(BaseTable):
+    """Members."""
+
+    __tablename__ = "Member Info"
+
+    first_name: Mapped[str]
+    middle_name: Mapped[str | None]
+    last_name: Mapped[str]
+    section: Mapped[str | None]
+    member_since: Mapped[str | None]
+    phone_number: Mapped[str | None]
+    email: Mapped[str | None]
+    address: Mapped[str | None]
+    emergency_contact: Mapped[str | None]
+    emergency_contact_phone_number: Mapped[str | None]
+
+    def __repr__(self) -> str:
+        """String representation of table."""
+        return f"""Member(first_name={self.first_name}, last_name={self.last_name}, section={self.section},
+        member_since={self.member_since}, phone_number={self.section}, email={self.email})"""
