@@ -11,6 +11,7 @@ packages = [{ include = "chorus_thing" }]
 python = "^3.12"
 requests = "*"
 sqlalchemy = "*"
+Flask = "*"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "*"
