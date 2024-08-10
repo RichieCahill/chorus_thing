@@ -1,11 +1,10 @@
-"""tests."""
+"""tests."""  # noqa: EXE002
 
 from datetime import UTC, datetime
 
 from sqlalchemy import MetaData
 from sqlalchemy.ext.declarative import AbstractConcreteBase
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import ForeignKey
 
 
 class ChorusThing(DeclarativeBase):
@@ -31,7 +30,9 @@ class Event(BaseTable):
     location: Mapped[str]
     event_time: Mapped[datetime] = mapped_column(default=datetime.now(tz=UTC), onupdate=datetime.now(tz=UTC))
     necessary_size: Mapped[int]
+    choral_arrangement: Mapped[str] = mapped_column(default="SATB")
 
     def __repr__(self) -> str:
         """String representation of table."""
-        return f"Event(event_time={self.event_time}, location={self.location}, paid_event={self.paid_event}, necessary_size={self.necessary_size})"
+        return f"""Event(event_time={self.event_time}, location={self.location}, paid_event={self.paid_event},
+        choral_arrangement={self.choral_arrangement}, necessary_size={self.necessary_size})"""

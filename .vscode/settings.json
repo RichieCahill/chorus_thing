@@ -23,6 +23,7 @@
     "pylance",
     "pylint",
     "pytest",
+    "SATB",
     "sqlalchemy",
     "tamasfe",
     "usernamehw",
