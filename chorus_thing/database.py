@@ -61,5 +61,5 @@ class MusicLibrary(BaseTable):
     track07_link: Mapped[str | None]
     track08_link: Mapped[str | None]
     track09_link: Mapped[str | None]
-    num_copies: Mapped[str]
+    number_copies: Mapped[str]
     license_info: Mapped[str | None]
