@@ -36,3 +36,30 @@ class Event(BaseTable):
         """String representation of table."""
         return f"""Event(event_time={self.event_time}, location={self.location}, paid_event={self.paid_event},
         choral_arrangement={self.choral_arrangement}, necessary_size={self.necessary_size})"""
+
+
+class MusicLibrary(BaseTable):
+    """A class for scores."""
+
+    __tablename__ = "music_library"
+
+    title: Mapped[str]
+    composer: Mapped[str]
+    lyricist: Mapped[str | None]
+    instrumentation: Mapped[str]
+    language: Mapped[str]
+    publisher: Mapped[str | None]
+    publication_number: Mapped[str | None]
+    score_link: Mapped[str | None]
+    lyric_link: Mapped[str | None]
+    track01_link: Mapped[str | None]
+    track02_link: Mapped[str | None]
+    track03_link: Mapped[str | None]
+    track04_link: Mapped[str | None]
+    track05_link: Mapped[str | None]
+    track06_link: Mapped[str | None]
+    track07_link: Mapped[str | None]
+    track08_link: Mapped[str | None]
+    track09_link: Mapped[str | None]
+    num_copies: Mapped[str]
+    license_info: Mapped[str | None]
