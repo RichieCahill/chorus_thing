@@ -63,6 +63,8 @@ class MusicLibrary(BaseTable):
     track09_link: Mapped[str | None]
     number_copies: Mapped[str]
     license_info: Mapped[str | None]
+
+
 class Member(BaseTable):
     """Members."""
 
