@@ -2,17 +2,8 @@
 
 from __future__ import annotations
 
-import logging
-
-from chorus_thing.common import configure_logger
-
-
-def main() -> None:
-    """Main function."""
-    configure_logger()
-
-    logging.info("Hello World")
-
+from chorus_thing.app import create_app
 
 if __name__ == "__main__":
-    main()
+    APP = create_app()
+    APP.run(host="0.0.0.0", port=5000, debug=True)  # noqa: S104
