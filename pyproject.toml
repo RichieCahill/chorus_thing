@@ -41,6 +41,9 @@ lint.ignore = [
     "ISC001", # (TEMP) conflicts when used with the formatter
 ]
 
+[tool.ruff.lint.pep8-naming]
+extend-ignore-names = ["class_"]
+
 [tool.ruff.lint.per-file-ignores]
 
 "tests/**" = [
