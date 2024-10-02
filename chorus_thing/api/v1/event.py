@@ -26,6 +26,13 @@ def add_event(engine: Engine) -> str:
         choral_arrangement=choral_arrangement,
     )
     with Session(engine) as session:
+        event = Event(
+            paid_event=paid_event,
+            location=location,
+            event_time=event_time,
+            necessary_size=necessary_size,
+            choral_arrangement=choral_arrangement,
+        )
         session.add(event)
         session.commit()
     return str(event)
@@ -34,7 +41,7 @@ def add_event(engine: Engine) -> str:
 @event_page.route("/event/<location>", methods=("GET"))
 def get_event(location: str, engine: Engine) -> Sequence[Event]:
     """Find Event in Database."""
-    statement = select(Event).filter_by(location=location)
+    statement = select(Event).where(location=location)
     with Session(engine) as session:
         return session.scalars(statement).all()
 
@@ -42,7 +49,7 @@ def get_event(location: str, engine: Engine) -> Sequence[Event]:
 @event_page.route("/event/<location>", methods=("PUT"))
 def update_event(location: str, engine: Engine) -> Sequence[Event]:
     """Update Event in Database."""
-    statement = select(Event).filter_by(location=location)
+    statement = select(Event).where(Event.location=location)
     with Session(engine) as session:
         event_list = session.scalars(statement).all()
         for event in event_list:
@@ -55,7 +62,7 @@ def update_event(location: str, engine: Engine) -> Sequence[Event]:
 @event_page.route("/event/<location>", methods=("DELETE"))
 def delete_event(location: str, engine: Engine) -> Sequence[Event]:
     """Delete Event in Database."""
-    statement = select(Event).filter_by(location=location)
+    statement = select(Event).where(Event.location=location)
     with Session(engine) as session:
         event_list = session.scalars(statement).all()
         for event in event_list:
