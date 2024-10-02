@@ -24,7 +24,7 @@ class Chorusitem(DeclarativeBase):
     metadata = MetaData(schema="chorus_item")
 
 
-class BassColumns:
+class BaseColumns:
     """Base columns."""
 
     id: Mapped[int] = mapped_column(primary_key=True)
@@ -32,11 +32,11 @@ class BassColumns:
     modified: Mapped[datetime] = mapped_column(default=datetime.now(tz=UTC), onupdate=datetime.now(tz=UTC))
 
 
-class BaseTable(BassColumns, AbstractConcreteBase, Chorusitem):
+class BaseTable(BaseColumns, AbstractConcreteBase, Chorusitem):
     """A base class for tables."""
 
 
-class BaseLookupTable(BassColumns, AbstractConcreteBase, Chorusitem):
+class BaseLookupTable(BaseColumns, AbstractConcreteBase, Chorusitem):
     """A lookup table."""
 
     name: Mapped[str] = mapped_column(primary_key=True)
